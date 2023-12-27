@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    dockerImage = docker.build('varshithport')
+                    dockerImage = docker.build('web')
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Run Docker container
-                    dockerImage.run('-p 4000:80 --name varshithport')
+                    dockerImage.run('-p 5050:80 --name webapp')
                 }
             }
         }
