@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Run Docker container
-                    dockerImage.run('-p 3000:80 --name varshithport')
+                    dockerImage.run('-p 4000:80 --name varshithport')
                 }
             }
         }
